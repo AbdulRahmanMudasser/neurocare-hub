@@ -23,7 +23,7 @@ class TextStyles {
   static TextStyle boldDarkSmallTextStyle() {
     return TextStyle(
       fontFamily: 'Poppins',
-      fontSize: 11.4.sp,
+      fontSize: 11.0.sp,
       color: Colors.black,
       fontWeight: FontWeight.w500,
     );
@@ -32,7 +32,16 @@ class TextStyles {
   static TextStyle boldLightSmallTextStyle() {
     return TextStyle(
       fontFamily: 'Poppins',
-      fontSize: 10.8.sp,
+      fontSize: 11.0.sp,
+      color: Colors.black54,
+      fontWeight: FontWeight.w500,
+    );
+  }
+
+  static TextStyle boldLightMediumTextStyle() {
+    return TextStyle(
+      fontFamily: 'Poppins',
+      fontSize: 14.0.sp,
       color: Colors.black54,
       fontWeight: FontWeight.w500,
     );
