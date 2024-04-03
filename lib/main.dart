@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:neuro_care_hub_app/pages/sign_up_page.dart';
+import 'package:get/get.dart';
+import 'package:neuro_care_hub_app/routes/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,14 +11,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'NeuroCare Hub',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const SignUpPage()
+      initialRoute: AppRoutes.INITIAL,
+      getPages: AppRoutes.routes,
     );
   }
 }
