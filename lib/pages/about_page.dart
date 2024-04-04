@@ -77,9 +77,9 @@ class AboutPage extends StatelessWidget {
                   height: 20.0.hp,
                   width: 40.0.wp,
                   fit: BoxFit.cover,
-                )
+                ),
               ],
-            )
+            ),
           ],
         ),
       ),

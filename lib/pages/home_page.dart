@@ -110,7 +110,7 @@ class HomePage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   CircleNavigator(
-                    onTap: () {},
+                    onTap: () => homeController.navigateToHelpPage(),
                     icon: Icons.help_outline,
                     text: "Help",
                   ),
@@ -142,5 +142,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
-

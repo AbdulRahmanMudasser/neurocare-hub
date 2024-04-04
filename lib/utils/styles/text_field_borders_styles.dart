@@ -30,4 +30,34 @@ class TextFieldBorderStyles {
     borderRadius: BorderRadius.circular(10),
     borderSide: BorderSide.none,
   );
+
+  static UnderlineInputBorder underlineBorder = UnderlineInputBorder(
+    borderRadius: BorderRadius.circular(10),
+    borderSide: const BorderSide(color: Colors.black),
+  );
+
+  static OutlineInputBorder underlineDisableBorder = OutlineInputBorder(
+    borderRadius: BorderRadius.circular(10),
+    borderSide: const BorderSide(color: Colors.black),
+  );
+
+  static OutlineInputBorder underlineErrorBorder = OutlineInputBorder(
+    borderRadius: BorderRadius.circular(10),
+    borderSide: BorderSide.none,
+  );
+
+  static OutlineInputBorder underlineEnabledBorder = OutlineInputBorder(
+    borderRadius: BorderRadius.circular(10),
+    borderSide: BorderSide.none,
+  );
+
+  static OutlineInputBorder underlineFocusedBorder = OutlineInputBorder(
+    borderRadius: BorderRadius.circular(10),
+    borderSide: BorderSide.none,
+  );
+
+  static OutlineInputBorder underlineFocusedErrorBorder = OutlineInputBorder(
+    borderRadius: BorderRadius.circular(10),
+    borderSide: BorderSide.none,
+  );
 }
