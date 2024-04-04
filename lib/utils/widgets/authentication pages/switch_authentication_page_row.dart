@@ -23,7 +23,10 @@ class SwitchAuthenticationPageRow extends StatelessWidget {
       children: [
         Text(
           firstText,
-          style: TextStyles.boldLightSmallTextStyle().copyWith(fontSize: 12.0.sp),
+          style: TextStyles.boldLightSmallTextStyle().copyWith(
+            fontSize: 12.0.sp,
+            color: Colors.white,
+          ),
         ),
         SizedBox(
           width: 2.0.wp,
@@ -32,7 +35,10 @@ class SwitchAuthenticationPageRow extends StatelessWidget {
           onTap: onTap,
           child: Text(
             secondText,
-            style: TextStyles.boldDarkSmallTextStyle().copyWith(fontSize: 12.0.sp),
+            style: TextStyles.boldDarkSmallTextStyle().copyWith(
+              fontSize: 12.0.sp,
+              color: Colors.white,
+            ),
           ),
         ),
       ],

@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:neuro_care_hub_app/controllers/authentication_controller.dart';
@@ -29,12 +28,12 @@ class LoginPage extends StatelessWidget {
             fit: BoxFit.fill,
             scale: double.maxFinite,
             image: AssetImage(
-              "assets/images/background_image_1.png",
+              "assets/images/background-1.jpg",
             ),
           ),
         ),
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 4.0.wp, vertical: 4.0.hp),
+          padding: EdgeInsets.symmetric(horizontal: 3.0.wp, vertical: 4.0.hp),
           child: Column(
             children: [
               SizedBox(
@@ -43,10 +42,10 @@ class LoginPage extends StatelessWidget {
 
               // login text
               Text(
-                "Login",
+                "Log In",
                 style: TextStyles.boldDarkLargeTextStyle().copyWith(
                   fontSize: 30.0.sp,
-                  color: Colors.black,
+                  color: Colors.white,
                 ),
               ),
 
@@ -61,10 +60,11 @@ class LoginPage extends StatelessWidget {
                 icon: Icons.email_outlined,
                 validator: (value) => authenticationController.validateEmailTextField(value),
                 keyboardType: TextInputType.emailAddress,
+                obscureText: false,
               ),
 
               SizedBox(
-                height: 1.5.hp,
+                height: 2.0.hp,
               ),
 
               // text field password
@@ -74,6 +74,7 @@ class LoginPage extends StatelessWidget {
                 icon: Icons.password_outlined,
                 validator: (value) => authenticationController.validatePasswordTextField(value),
                 keyboardType: TextInputType.text,
+                obscureText: true,
               ),
 
               SizedBox(
