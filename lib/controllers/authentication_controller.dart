@@ -45,4 +45,21 @@ class AuthenticationController extends GetxController {
   navigateToLoginPage() {
     return Get.toNamed("/login");
   }
+
+  // navigate to home page
+  navigateToHomePage() {
+    return Get.toNamed("/home");
+  }
+
+  @override
+  void dispose() {
+    loginEmailController.dispose();
+    loginPasswordController.dispose();
+
+    signupNameController.dispose();
+    signupEmailController.dispose();
+    signupPasswordController.dispose();
+
+    super.dispose();
+  }
 }

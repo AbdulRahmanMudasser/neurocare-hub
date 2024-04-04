@@ -42,10 +42,10 @@ class LoginPage extends StatelessWidget {
 
               // login text
               Text(
-                "Log In",
+                "Login",
                 style: TextStyles.boldDarkLargeTextStyle().copyWith(
                   fontSize: 30.0.sp,
-                  color: Colors.white,
+                  color: const Color(0xffE2F0FA),
                 ),
               ),
 
@@ -82,7 +82,7 @@ class LoginPage extends StatelessWidget {
               ),
 
               ReusableButton(
-                onTap: () {},
+                onTap: () => authenticationController.navigateToHomePage(),
                 text: "Login",
               ),
 

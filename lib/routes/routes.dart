@@ -1,7 +1,13 @@
 import 'package:get/get.dart';
 import 'package:neuro_care_hub_app/controllers/authentication_controller.dart';
+import 'package:neuro_care_hub_app/controllers/home_controller.dart';
+import 'package:neuro_care_hub_app/controllers/test_page_controller.dart';
+import 'package:neuro_care_hub_app/pages/about_page.dart';
+import 'package:neuro_care_hub_app/pages/contact_us_page.dart';
+import 'package:neuro_care_hub_app/pages/home_page.dart';
 import 'package:neuro_care_hub_app/pages/sign_up_page.dart';
 import 'package:neuro_care_hub_app/pages/splash_page.dart';
+import 'package:neuro_care_hub_app/pages/test_page.dart';
 
 import '../pages/login_page.dart';
 
@@ -10,6 +16,9 @@ class AppRoutes {
   static const LOGIN = '/login';
   static const SIGNUP = '/signup';
   static const HOME = '/home';
+  static const HELP = '/help';
+  static const ABOUT = '/about';
+  static const TEST = '/test';
 
   static final routes = [
     GetPage(
@@ -18,7 +27,6 @@ class AppRoutes {
       binding: BindingsBuilder(() {
         Get.put(AuthenticationController());
       }),
-      transition: Transition.cupertino,
     ),
     GetPage(
       name: SIGNUP,
@@ -26,7 +34,6 @@ class AppRoutes {
       binding: BindingsBuilder(() {
         Get.put(AuthenticationController());
       }),
-      transition: Transition.cupertino,
     ),
     GetPage(
       name: LOGIN,
@@ -34,7 +41,34 @@ class AppRoutes {
       binding: BindingsBuilder(() {
         Get.put(AuthenticationController());
       }),
-      transition: Transition.cupertino,
+    ),
+    GetPage(
+      name: HOME,
+      page: () => HomePage(),
+      binding: BindingsBuilder(() {
+        Get.put(HomeController());
+      }),
+    ),
+    GetPage(
+      name: ABOUT,
+      page: () => const AboutPage(),
+      binding: BindingsBuilder(() {
+        Get.put(HomeController());
+      }),
+    ),
+    GetPage(
+      name: HELP,
+      page: () => HelpPage(),
+      binding: BindingsBuilder(() {
+        Get.put(HomeController());
+      }),
+    ),
+    GetPage(
+      name: TEST,
+      page: () => TestPage(),
+      binding: BindingsBuilder(() {
+        Get.put(TestPageController());
+      }),
     ),
   ];
 }

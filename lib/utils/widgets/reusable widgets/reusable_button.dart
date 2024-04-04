@@ -10,12 +10,14 @@ class ReusableButton extends StatelessWidget {
     required this.text,
     this.verticalPadding = 1.75,
     this.width = 45,
+    this.color = const Color(0xFF301364),
   });
 
   final String text;
   final GestureTapCallback onTap;
   final double verticalPadding;
   final double width;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +31,7 @@ class ReusableButton extends StatelessWidget {
         width: double.parse("$width").wp,
         decoration: BoxDecoration(
           // color: const Color(0xFFe7bdb2),
-          color: const Color(0xFF301364),
+          color: color,
           borderRadius: BorderRadius.circular(25),
         ),
         child: Text(
