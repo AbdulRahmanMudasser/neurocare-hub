@@ -45,4 +45,9 @@ class AuthenticationController extends GetxController {
   navigateToLoginPage() {
     return Get.toNamed("/login");
   }
+
+  // navigate to home page
+  navigateToHomePage() {
+    return Get.toNamed("/home");
+  }
 }

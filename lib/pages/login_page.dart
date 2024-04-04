@@ -82,7 +82,7 @@ class LoginPage extends StatelessWidget {
               ),
 
               ReusableButton(
-                onTap: () {},
+                onTap: () => authenticationController.navigateToHomePage(),
                 text: "Login",
               ),
 

@@ -25,7 +25,7 @@ class SwitchAuthenticationPageRow extends StatelessWidget {
           firstText,
           style: TextStyles.boldLightSmallTextStyle().copyWith(
             fontSize: 12.0.sp,
-            color: Colors.white,
+            color: const Color(0xffE2F0FA),
           ),
         ),
         SizedBox(
@@ -37,7 +37,7 @@ class SwitchAuthenticationPageRow extends StatelessWidget {
             secondText,
             style: TextStyles.boldDarkSmallTextStyle().copyWith(
               fontSize: 12.0.sp,
-              color: Colors.white,
+              color: const Color(0xffE2F0FA),
             ),
           ),
         ),

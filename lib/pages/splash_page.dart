@@ -57,7 +57,7 @@ class _SplashPageState extends State<SplashPage> with SingleTickerProviderStateM
             Text(
               "Brain Tumor Detection",
               style: TextStyles.boldDarkLargeTextStyle().copyWith(
-                color: Colors.white,
+                color: const Color(0xffE2F0FA),
                 fontSize: 25.0.sp,
                 fontFamily: '',
                 fontWeight: FontWeight.w500,
