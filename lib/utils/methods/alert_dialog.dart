@@ -33,4 +33,35 @@ class AlertDialogs {
       ),
     );
   }
+
+  static resultAlertDialog(IconData icon, String message) {
+    Get.dialog(
+      AlertDialog(
+        backgroundColor: const Color(0xffb0a1d2),
+        contentPadding: EdgeInsets.all(3.0.wp),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Row(
+              children: [
+                Icon(
+                  icon,
+                  color: Colors.white,
+                ),
+                SizedBox(
+                  width: 1.5.wp,
+                ),
+                Text(
+                  message,
+                  style: const TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 }

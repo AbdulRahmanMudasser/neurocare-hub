@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:neuro_care_hub_app/utils/extensions/size_extension.dart';
 import 'package:neuro_care_hub_app/utils/styles/text_styles.dart';
+import 'package:neuro_care_hub_app/utils/widgets/reusable%20widgets/reusable_button.dart';
 
 import '../utils/widgets/about page/brain_tumor_types.dart';
 
@@ -12,7 +14,7 @@ class AboutPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         foregroundColor: Colors.white,
-        backgroundColor: const Color(0xffb4a5d6),
+        backgroundColor: const Color(0xff664f9e),
         title: Text(
           "About Brain Tumor",
           style: TextStyles.boldDarkLargeTextStyle().copyWith(color: Colors.white),
@@ -72,6 +74,9 @@ class AboutPage extends StatelessWidget {
                   width: 40.0.wp,
                   fit: BoxFit.cover,
                 ),
+                SizedBox(
+                  width: 1.0.wp,
+                ),
                 Image.asset(
                   "assets/images/description-2.png",
                   height: 20.0.hp,
@@ -79,6 +84,23 @@ class AboutPage extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ],
+            ),
+
+            SizedBox(
+              height: 1.0.hp,
+            ),
+
+            const Spacer(),
+
+            Align(
+              alignment: Alignment.center,
+              child: ReusableButton(
+                onTap: () {
+                  Get.back();
+                },
+                text: "Go Back",
+                color: const Color(0xff664f9e),
+              ),
             ),
           ],
         ),

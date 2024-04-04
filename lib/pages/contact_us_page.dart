@@ -18,7 +18,7 @@ class HelpPage extends StatelessWidget {
       backgroundColor: Colors.white.withOpacity(0.98),
       appBar: AppBar(
         foregroundColor: Colors.white,
-        backgroundColor: const Color(0xffb4a5d6),
+        backgroundColor: const Color(0xff664f9e),
         title: Text(
           "Contact Us",
           style: TextStyles.boldDarkLargeTextStyle().copyWith(color: Colors.white),
@@ -82,7 +82,7 @@ class HelpPage extends StatelessWidget {
                   "Your Query Has Been Sent",
                 ),
                 text: "Send",
-                color: const Color(0xffb2a3d4),
+                color: const Color(0xff664f9e),
                 verticalPadding: 1,
                 width: 30,
               ),

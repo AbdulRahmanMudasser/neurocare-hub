@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
       extendBody: true,
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 2.0.wp, vertical: 1.5.hp),
+          padding: EdgeInsets.symmetric(horizontal: 4.0.wp, vertical: 1.5.hp),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -91,7 +91,7 @@ class HomePage extends StatelessWidget {
                         height: 2.0.hp,
                       ),
                       CircleNavigator(
-                        onTap: () {},
+                        onTap: () => homeController.navigateToTestPage(),
                         icon: Icons.health_and_safety_outlined,
                         text: "BTD Test",
                       ),

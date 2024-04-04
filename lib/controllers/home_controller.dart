@@ -17,6 +17,11 @@ class HomeController extends GetxController {
     return Get.toNamed("/help");
   }
 
+  // navigate to help page
+  navigateToTestPage() {
+    return Get.toNamed("/test");
+  }
+
   TextEditingController helpEmailController = TextEditingController();
   TextEditingController helpTitleController = TextEditingController();
   TextEditingController helpQueryController = TextEditingController();
