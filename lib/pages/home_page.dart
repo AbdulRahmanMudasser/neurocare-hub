@@ -78,7 +78,7 @@ class HomePage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   CircleNavigator(
-                    onTap: () {},
+                    onTap: () => homeController.navigateToAboutPage(),
                     icon: Icons.calendar_today_outlined,
                     text: "About",
                   ),

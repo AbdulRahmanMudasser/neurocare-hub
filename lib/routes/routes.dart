@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:neuro_care_hub_app/controllers/authentication_controller.dart';
 import 'package:neuro_care_hub_app/controllers/home_controller.dart';
+import 'package:neuro_care_hub_app/pages/about_page.dart';
 import 'package:neuro_care_hub_app/pages/home_page.dart';
 import 'package:neuro_care_hub_app/pages/sign_up_page.dart';
 import 'package:neuro_care_hub_app/pages/splash_page.dart';
@@ -13,7 +14,7 @@ class AppRoutes {
   static const SIGNUP = '/signup';
   static const HOME = '/home';
   static const HELP = '/help';
-  static const INFO = '/info';
+  static const ABOUT = '/about';
   static const TEST = '/test';
 
   static final routes = [
@@ -41,6 +42,13 @@ class AppRoutes {
     GetPage(
       name: HOME,
       page: () => HomePage(),
+      binding: BindingsBuilder(() {
+        Get.put(HomeController());
+      }),
+    ),
+    GetPage(
+      name: ABOUT,
+      page: () => const AboutPage(),
       binding: BindingsBuilder(() {
         Get.put(HomeController());
       }),

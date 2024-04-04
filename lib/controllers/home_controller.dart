@@ -6,8 +6,8 @@ class HomeController extends GetxController {
     return Get.toNamed("/login");
   }
 
-  // navigate to home page
-  navigateToHomePage() {
-    return Get.toNamed("/home");
+  // navigate to about page
+  navigateToAboutPage() {
+    return Get.toNamed("/about");
   }
 }
