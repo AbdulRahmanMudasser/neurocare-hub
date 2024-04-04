@@ -34,7 +34,7 @@ class TextStyles {
       fontFamily: 'Poppins',
       fontSize: 11.0.sp,
       color: Colors.black54,
-      fontWeight: FontWeight.w500,
+      fontWeight: FontWeight.bold,
     );
   }
 

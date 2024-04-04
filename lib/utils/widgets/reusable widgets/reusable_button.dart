@@ -8,8 +8,8 @@ class ReusableButton extends StatelessWidget {
     super.key,
     required this.onTap,
     required this.text,
-    this.verticalPadding = 1.5,
-    this.width = 50,
+    this.verticalPadding = 1.75,
+    this.width = 45,
   });
 
   final String text;
@@ -28,8 +28,9 @@ class ReusableButton extends StatelessWidget {
         ),
         width: double.parse("$width").wp,
         decoration: BoxDecoration(
-          color: const Color(0xFFe7bdb2),
-          borderRadius: BorderRadius.circular(5.0.wp),
+          // color: const Color(0xFFe7bdb2),
+          color: const Color(0xFF301364),
+          borderRadius: BorderRadius.circular(25),
         ),
         child: Text(
           text,
