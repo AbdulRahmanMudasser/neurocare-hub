@@ -40,7 +40,6 @@ class ReusableTextFormField extends StatelessWidget {
       keyboardType: keyboardType,
       validator: validator,
       decoration: InputDecoration(
-        // contentPadding: EdgeInsets.symmetric(horizontal: 1.5.wp, vertical: 1.75.hp),
         contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
         alignLabelWithHint: true,
         enabled: true,

@@ -1,7 +1,4 @@
 import 'package:get/get.dart';
-import 'package:neuro_care_hub_app/controllers/authentication_controller.dart';
-import 'package:neuro_care_hub_app/controllers/home_controller.dart';
-import 'package:neuro_care_hub_app/controllers/test_page_controller.dart';
 import 'package:neuro_care_hub_app/pages/about_page.dart';
 import 'package:neuro_care_hub_app/pages/contact_us_page.dart';
 import 'package:neuro_care_hub_app/pages/home_page.dart';
@@ -24,51 +21,30 @@ class AppRoutes {
     GetPage(
       name: INITIAL,
       page: () => const SplashPage(),
-      binding: BindingsBuilder(() {
-        Get.put(AuthenticationController());
-      }),
     ),
     GetPage(
       name: SIGNUP,
       page: () => SignUpPage(),
-      binding: BindingsBuilder(() {
-        Get.put(AuthenticationController());
-      }),
     ),
     GetPage(
       name: LOGIN,
       page: () => LoginPage(),
-      binding: BindingsBuilder(() {
-        Get.put(AuthenticationController());
-      }),
     ),
     GetPage(
       name: HOME,
       page: () => HomePage(),
-      binding: BindingsBuilder(() {
-        Get.put(HomeController());
-      }),
     ),
     GetPage(
       name: ABOUT,
       page: () => const AboutPage(),
-      binding: BindingsBuilder(() {
-        Get.put(HomeController());
-      }),
     ),
     GetPage(
       name: HELP,
       page: () => HelpPage(),
-      binding: BindingsBuilder(() {
-        Get.put(HomeController());
-      }),
     ),
     GetPage(
       name: TEST,
       page: () => TestPage(),
-      binding: BindingsBuilder(() {
-        Get.put(TestPageController());
-      }),
     ),
   ];
 }

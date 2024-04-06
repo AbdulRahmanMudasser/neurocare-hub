@@ -1,7 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:neuro_care_hub_app/pages/login_page.dart';
-import 'package:neuro_care_hub_app/utils/extensions/size_extension.dart';
-import 'package:neuro_care_hub_app/utils/styles/text_styles.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -15,10 +15,15 @@ class _SplashPageState extends State<SplashPage> with SingleTickerProviderStateM
   void initState() {
     super.initState();
 
-    Future.delayed(
-      const Duration(seconds: 2),
+    navigateToLoginPage();
+  }
+
+  void navigateToLoginPage() {
+    Timer(
+      const Duration(seconds: 3),
       () {
-        Navigator.of(context).pushReplacement(
+        Navigator.pushReplacement(
+          context,
           MaterialPageRoute(
             builder: (context) => LoginPage(),
           ),
@@ -43,30 +48,14 @@ class _SplashPageState extends State<SplashPage> with SingleTickerProviderStateM
           ),
         ),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Spacer(),
             Image.asset(
               "assets/images/splash-page-logo.png",
               height: 250,
               width: 265,
               fit: BoxFit.cover,
-            ),
-            const SizedBox(
-              height: 50,
-            ),
-            Text(
-              "Brain Tumor Detection",
-              style: TextStyles.boldDarkLargeTextStyle().copyWith(
-                // color: Colors.white,
-                color: const Color(0xFF2d1262),
-                fontSize: 20.0.sp,
-                fontFamily: '',
-                fontWeight: FontWeight.w500,
-                // fontStyle: FontStyle.italic
-              ),
-            ),
-            const Spacer(
-              flex: 2,
             ),
           ],
         ),

@@ -54,20 +54,6 @@ class HomePage extends StatelessWidget {
                 softWrap: true,
               ),
 
-              // SizedBox(
-              //   height: 0.5.hp,
-              // ),
-              //
-              // // sub text
-              // Text(
-              //   "Rehab good service with Brain Tumor Detection App",
-              //   style: TextStyles.boldDarkSmallTextStyle().copyWith(
-              //     color: Colors.white,
-              //   ),
-              //   textAlign: TextAlign.left,
-              //   softWrap: true,
-              // ),
-
               SizedBox(
                 height: 15.0.hp,
               ),
@@ -125,7 +111,8 @@ class HomePage extends StatelessWidget {
               Align(
                 alignment: Alignment.center,
                 child: ReusableButton(
-                  onTap: () => homeController.navigateToLoginPage(),
+                  // onTap: () => homeController.navigateToLoginPage(),
+                  onTap: () {},
                   text: "Logout",
                   color: const Color(0xff7c4c87),
                   width: 60,
