@@ -7,10 +7,8 @@ import 'package:neuro_care_hub_app/utils/styles/text_styles.dart';
 import 'package:neuro_care_hub_app/utils/widgets/reusable%20widgets/reusable_button.dart';
 import 'package:neuro_care_hub_app/utils/widgets/reusable%20widgets/text_form_field.dart';
 
-class HelpPage extends StatelessWidget {
-  HelpPage({super.key});
-
-  final HomeController homeController = Get.find();
+class HelpPage extends GetView<HomeController> {
+  const HelpPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -38,10 +36,9 @@ class HelpPage extends StatelessWidget {
               height: 2.0.hp,
             ),
             ReusableTextFormField(
-              controller: homeController.helpEmailController,
+              controller: controller.helpEmailController,
               hintText: "Email",
               icon: null,
-              validator: (value) => homeController.validateEmailTextField(value),
               keyboardType: TextInputType.emailAddress,
               obscureText: false,
             ),
@@ -49,10 +46,9 @@ class HelpPage extends StatelessWidget {
               height: 2.0.hp,
             ),
             ReusableTextFormField(
-              controller: homeController.helpTitleController,
+              controller: controller.helpTitleController,
               hintText: "Title",
               icon: null,
-              validator: (value) => homeController.validateEmailTextField(value),
               keyboardType: TextInputType.emailAddress,
               obscureText: false,
             ),
@@ -60,10 +56,9 @@ class HelpPage extends StatelessWidget {
               height: 2.0.hp,
             ),
             ReusableTextFormField(
-              controller: homeController.helpQueryController,
+              controller: controller.helpQueryController,
               hintText: "Message",
               icon: null,
-              validator: (value) => homeController.validateEmailTextField(value),
               keyboardType: TextInputType.emailAddress,
               obscureText: false,
               maxLines: 6,

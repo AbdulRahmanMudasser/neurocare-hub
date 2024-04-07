@@ -9,33 +9,6 @@ class AuthenticationController extends GetxController {
   TextEditingController signupEmailController = TextEditingController();
   TextEditingController signupPasswordController = TextEditingController();
 
-  // method to validate email text field
-  String? validateEmailTextField(String? value) {
-    if (value!.isEmpty) {
-      return "Please enter valid Email";
-    }
-
-    return null;
-  }
-
-  // method to validate password text field
-  String? validatePasswordTextField(String? value) {
-    if (value!.isEmpty) {
-      return "Please enter correct Password";
-    }
-
-    return null;
-  }
-
-  // method to validate password text field
-  String? validateNameTextField(String? value) {
-    if (value!.isEmpty) {
-      return "Please enter a Name";
-    }
-
-    return null;
-  }
-
   // navigate to sign up page
   navigateToSignUpPage() {
     return Get.toNamed("/signup");
@@ -48,7 +21,8 @@ class AuthenticationController extends GetxController {
 
   // navigate to home page
   navigateToHomePage() {
-    return Get.toNamed("/home");
+    Get.toNamed("/home");
+    Get.delete<AuthenticationController>();
   }
 
   @override

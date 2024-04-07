@@ -1,13 +1,11 @@
 import 'package:get/get.dart';
-import 'package:neuro_care_hub_app/controllers/authentication_controller.dart';
-import 'package:neuro_care_hub_app/controllers/home_controller.dart';
-import 'package:neuro_care_hub_app/controllers/test_page_controller.dart';
 import 'package:neuro_care_hub_app/pages/about_page.dart';
+import 'package:neuro_care_hub_app/pages/alzheimer_detection_page.dart';
 import 'package:neuro_care_hub_app/pages/contact_us_page.dart';
 import 'package:neuro_care_hub_app/pages/home_page.dart';
 import 'package:neuro_care_hub_app/pages/sign_up_page.dart';
 import 'package:neuro_care_hub_app/pages/splash_page.dart';
-import 'package:neuro_care_hub_app/pages/test_page.dart';
+import 'package:neuro_care_hub_app/pages/brain_tumor_detection_page.dart';
 
 import '../pages/login_page.dart';
 
@@ -18,57 +16,41 @@ class AppRoutes {
   static const HOME = '/home';
   static const HELP = '/help';
   static const ABOUT = '/about';
-  static const TEST = '/test';
+  static const BTD = '/btd';
+  static const AD = '/ad';
 
   static final routes = [
     GetPage(
       name: INITIAL,
       page: () => const SplashPage(),
-      binding: BindingsBuilder(() {
-        Get.put(AuthenticationController());
-      }),
     ),
     GetPage(
       name: SIGNUP,
-      page: () => SignUpPage(),
-      binding: BindingsBuilder(() {
-        Get.put(AuthenticationController());
-      }),
+      page: () => const SignUpPage(),
     ),
     GetPage(
       name: LOGIN,
-      page: () => LoginPage(),
-      binding: BindingsBuilder(() {
-        Get.put(AuthenticationController());
-      }),
+      page: () => const LoginPage(),
     ),
     GetPage(
       name: HOME,
-      page: () => HomePage(),
-      binding: BindingsBuilder(() {
-        Get.put(HomeController());
-      }),
+      page: () => const HomePage(),
     ),
     GetPage(
       name: ABOUT,
       page: () => const AboutPage(),
-      binding: BindingsBuilder(() {
-        Get.put(HomeController());
-      }),
     ),
     GetPage(
       name: HELP,
-      page: () => HelpPage(),
-      binding: BindingsBuilder(() {
-        Get.put(HomeController());
-      }),
+      page: () => const HelpPage(),
     ),
     GetPage(
-      name: TEST,
-      page: () => TestPage(),
-      binding: BindingsBuilder(() {
-        Get.put(TestPageController());
-      }),
+      name: BTD,
+      page: () => const BrainTumorDetectionPage(),
+    ),
+    GetPage(
+      name: AD,
+      page: () => const AlzheimerDetectionPage(),
     ),
   ];
 }
