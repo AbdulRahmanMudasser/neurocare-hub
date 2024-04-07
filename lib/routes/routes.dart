@@ -1,10 +1,11 @@
 import 'package:get/get.dart';
 import 'package:neuro_care_hub_app/pages/about_page.dart';
+import 'package:neuro_care_hub_app/pages/alzheimer_detection_page.dart';
 import 'package:neuro_care_hub_app/pages/contact_us_page.dart';
 import 'package:neuro_care_hub_app/pages/home_page.dart';
 import 'package:neuro_care_hub_app/pages/sign_up_page.dart';
 import 'package:neuro_care_hub_app/pages/splash_page.dart';
-import 'package:neuro_care_hub_app/pages/test_page.dart';
+import 'package:neuro_care_hub_app/pages/brain_tumor_detection_page.dart';
 
 import '../pages/login_page.dart';
 
@@ -15,7 +16,8 @@ class AppRoutes {
   static const HOME = '/home';
   static const HELP = '/help';
   static const ABOUT = '/about';
-  static const TEST = '/test';
+  static const BTD = '/btd';
+  static const AD = '/ad';
 
   static final routes = [
     GetPage(
@@ -24,15 +26,15 @@ class AppRoutes {
     ),
     GetPage(
       name: SIGNUP,
-      page: () => SignUpPage(),
+      page: () => const SignUpPage(),
     ),
     GetPage(
       name: LOGIN,
-      page: () => LoginPage(),
+      page: () => const LoginPage(),
     ),
     GetPage(
       name: HOME,
-      page: () => HomePage(),
+      page: () => const HomePage(),
     ),
     GetPage(
       name: ABOUT,
@@ -40,11 +42,15 @@ class AppRoutes {
     ),
     GetPage(
       name: HELP,
-      page: () => HelpPage(),
+      page: () => const HelpPage(),
     ),
     GetPage(
-      name: TEST,
-      page: () => TestPage(),
+      name: BTD,
+      page: () => const BrainTumorDetectionPage(),
+    ),
+    GetPage(
+      name: AD,
+      page: () => const AlzheimerDetectionPage(),
     ),
   ];
 }

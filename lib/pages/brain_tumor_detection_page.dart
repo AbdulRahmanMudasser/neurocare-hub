@@ -3,8 +3,8 @@ import 'package:neuro_care_hub_app/utils/extensions/size_extension.dart';
 import 'package:neuro_care_hub_app/utils/methods/alert_dialog.dart';
 import 'package:neuro_care_hub_app/utils/widgets/reusable%20widgets/reusable_button.dart';
 
-class TestPage extends StatelessWidget {
-  const TestPage({super.key});
+class BrainTumorDetectionPage extends StatelessWidget {
+  const BrainTumorDetectionPage({super.key});
 
   @override
   Widget build(BuildContext context) {

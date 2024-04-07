@@ -15,17 +15,17 @@ class _SplashPageState extends State<SplashPage> with SingleTickerProviderStateM
   void initState() {
     super.initState();
 
-    navigateToLoginPage();
+    _navigateToLoginPage();
   }
 
-  void navigateToLoginPage() {
+  void _navigateToLoginPage() {
     Timer(
       const Duration(seconds: 3),
       () {
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => LoginPage(),
+            builder: (context) => const LoginPage(),
           ),
         );
       },
@@ -34,31 +34,38 @@ class _SplashPageState extends State<SplashPage> with SingleTickerProviderStateM
 
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
+
     return Scaffold(
       extendBody: true,
       resizeToAvoidBottomInset: false,
       extendBodyBehindAppBar: true,
-      body: Container(
-        height: double.infinity,
-        width: double.infinity,
-        decoration: const BoxDecoration(
-          image: DecorationImage(
+      body: _body(height, width),
+    );
+  }
+
+  Container _body(double height, double width) {
+    return Container(
+      height: double.infinity,
+      width: double.infinity,
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+          fit: BoxFit.cover,
+          image: AssetImage("assets/images/background-2.png"),
+        ),
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Image.asset(
+            "assets/images/splash-page-logo.png",
+            height: height / 4.5,
+            width: width / 1.85,
             fit: BoxFit.cover,
-            image: AssetImage("assets/images/background-2.jpg"),
           ),
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Image.asset(
-              "assets/images/splash-page-logo.png",
-              height: 250,
-              width: 265,
-              fit: BoxFit.cover,
-            ),
-          ],
-        ),
+        ],
       ),
     );
   }

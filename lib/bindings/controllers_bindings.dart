@@ -6,8 +6,8 @@ import 'package:neuro_care_hub_app/controllers/test_page_controller.dart';
 class ControllersBindings extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<AuthenticationController>(() => AuthenticationController());
-    Get.lazyPut<HomeController>(() => HomeController());
-    Get.lazyPut<TestPageController>(() => TestPageController());
+    Get.put<AuthenticationController>(AuthenticationController());
+    Get.put<HomeController>(HomeController(), permanent: true);
+    Get.put<TestPageController>(TestPageController(), permanent: true);
   }
 }

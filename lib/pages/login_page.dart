@@ -8,10 +8,8 @@ import 'package:neuro_care_hub_app/utils/widgets/reusable%20widgets/reusable_but
 import '../utils/widgets/authentication pages/switch_authentication_page_row.dart';
 import '../utils/widgets/reusable widgets/text_form_field.dart';
 
-class LoginPage extends StatelessWidget {
-  LoginPage({super.key});
-
-  final AuthenticationController authenticationController = Get.find();
+class LoginPage extends GetView<AuthenticationController> {
+  const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +22,6 @@ class LoginPage extends StatelessWidget {
           body: Container(
             width: double.infinity,
             height: double.infinity,
-            // color: Colors.white.withOpacity(0.9),
             decoration: const BoxDecoration(
               image: DecorationImage(
                 fit: BoxFit.fill,
@@ -57,10 +54,9 @@ class LoginPage extends StatelessWidget {
 
                   // text field email
                   ReusableTextFormField(
-                    controller: authenticationController.loginEmailController,
+                    controller: controller.loginEmailController,
                     hintText: 'Email',
                     icon: Icons.email_outlined,
-                    validator: (value) => authenticationController.validateEmailTextField(value),
                     keyboardType: TextInputType.emailAddress,
                     obscureText: false,
                   ),
@@ -71,10 +67,9 @@ class LoginPage extends StatelessWidget {
 
                   // text field password
                   ReusableTextFormField(
-                    controller: authenticationController.loginPasswordController,
+                    controller: controller.loginPasswordController,
                     hintText: 'Password',
                     icon: Icons.password_outlined,
-                    validator: (value) => authenticationController.validatePasswordTextField(value),
                     keyboardType: TextInputType.text,
                     obscureText: true,
                   ),
@@ -84,7 +79,7 @@ class LoginPage extends StatelessWidget {
                   ),
 
                   ReusableButton(
-                    onTap: () => authenticationController.navigateToHomePage(),
+                    onTap: () => controller.navigateToHomePage(),
                     text: "Login",
                   ),
 
@@ -97,7 +92,7 @@ class LoginPage extends StatelessWidget {
                     child: SwitchAuthenticationPageRow(
                       firstText: "Don't Have An Account?",
                       secondText: "Sign Up",
-                      onTap: () => authenticationController.navigateToSignUpPage(),
+                      onTap: () => controller.navigateToSignUpPage(),
                     ),
                   ),
                 ],

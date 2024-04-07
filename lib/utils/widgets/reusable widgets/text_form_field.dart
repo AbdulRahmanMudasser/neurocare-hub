@@ -10,7 +10,6 @@ class ReusableTextFormField extends StatelessWidget {
     required this.controller,
     required this.hintText,
     required this.icon,
-    required this.validator,
     required this.keyboardType,
     required this.obscureText,
     this.maxLines = 1,
@@ -19,7 +18,6 @@ class ReusableTextFormField extends StatelessWidget {
   final TextEditingController controller;
   final String hintText;
   final IconData? icon;
-  final String? Function(String?)? validator;
   final TextInputType keyboardType;
   final bool obscureText;
   final int maxLines;
@@ -38,7 +36,6 @@ class ReusableTextFormField extends StatelessWidget {
       cursorColor: Colors.transparent,
       cursorErrorColor: Colors.transparent,
       keyboardType: keyboardType,
-      validator: validator,
       decoration: InputDecoration(
         contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
         alignLabelWithHint: true,

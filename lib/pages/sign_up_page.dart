@@ -9,10 +9,8 @@ import '../utils/widgets/authentication pages/switch_authentication_page_row.dar
 import '../utils/widgets/reusable widgets/reusable_button.dart';
 import '../utils/widgets/reusable widgets/text_form_field.dart';
 
-class SignUpPage extends StatelessWidget {
-  SignUpPage({super.key});
-
-  final AuthenticationController authenticationController = Get.find();
+class SignUpPage extends GetView<AuthenticationController> {
+  const SignUpPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +21,6 @@ class SignUpPage extends StatelessWidget {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        // color: Colors.white.withOpacity(0.9),
         decoration: const BoxDecoration(
           image: DecorationImage(
             fit: BoxFit.fill,
@@ -56,10 +53,9 @@ class SignUpPage extends StatelessWidget {
 
               // text field name
               ReusableTextFormField(
-                controller: authenticationController.signupNameController,
+                controller: controller.signupNameController,
                 hintText: 'Name',
                 icon: Icons.person_outline,
-                validator: (value) => authenticationController.validateEmailTextField(value),
                 keyboardType: TextInputType.text,
                 obscureText: false,
               ),
@@ -70,10 +66,9 @@ class SignUpPage extends StatelessWidget {
 
               // text field email
               ReusableTextFormField(
-                controller: authenticationController.signupEmailController,
+                controller: controller.signupEmailController,
                 hintText: 'Email',
                 icon: Icons.email_outlined,
-                validator: (value) => authenticationController.validateEmailTextField(value),
                 keyboardType: TextInputType.emailAddress,
                 obscureText: false,
               ),
@@ -84,10 +79,9 @@ class SignUpPage extends StatelessWidget {
 
               // text field password
               ReusableTextFormField(
-                controller: authenticationController.signupPasswordController,
+                controller: controller.signupPasswordController,
                 hintText: 'Password',
                 icon: Icons.password_outlined,
-                validator: (value) => authenticationController.validatePasswordTextField(value),
                 keyboardType: TextInputType.text,
                 obscureText: true,
               ),
@@ -97,7 +91,7 @@ class SignUpPage extends StatelessWidget {
               ),
 
               ReusableButton(
-                onTap: () => authenticationController.navigateToHomePage(),
+                onTap: () => controller.navigateToHomePage(),
                 text: "Sign Up",
               ),
 
@@ -108,7 +102,7 @@ class SignUpPage extends StatelessWidget {
               SwitchAuthenticationPageRow(
                 firstText: "Already Have An Account?",
                 secondText: "Login",
-                onTap: () => authenticationController.navigateToLoginPage(),
+                onTap: () => controller.navigateToLoginPage(),
               ),
             ],
           ),
